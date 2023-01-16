@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        h1{
+            position: relative;
+            animation-name: slidein;
+            animation-duration: 4s;
+            animation-timing-function: ease;
+            animation-direction: alternate;
+            animation-iteration-count: 2;
+        }
+        
+        div{
+            width: 150px;
+            height: 100px;
+            position: relative;
+            background-color: cadetblue;
+            animation-name: circular;
+            animation-duration: 5s;
+            animation-delay: 8s ;
+            animation-timing-function: linear;
+            text-align: center;
+            font-size: 30px;
+            padding-top: 50px;
+        }
+        
+        @keyframes circular{
+            0%{
+                background-color: cadetblue; 
+                left: 0px; 
+                top: 0px;
+            }
+            25%{
+                background-color: aquamarine; 
+                left: 200px; 
+                top: 0px;
+            }
+            50%{
+                background-color: coral; 
+                left: 200px; 
+                top: 200px;
+            }
+            75%{
+                background-color: cornflowerblue; 
+                left: 0px; 
+                top: 200px;
+            }
+            100%{
+                background-color: crimson; 
+                left: 0px; 
+                top: 0px;
+            }
+        }
+
+        @keyframes slidein{
+            from{
+                margin-left: 0%;
+                width: 100%;
+            }
+            50%{
+                margin-left: 50%;
+                font-size: 250%;
+                width: 150%;
+            }
+            to{
+                margin-left: 100%;
+                width: 200%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Animation</h1>
+    <div>Hello!</div>
+</body>
+</html>
